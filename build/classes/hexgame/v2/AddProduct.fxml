@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hexgame.v2.ProductController">
+   <children>
+      <VBox prefHeight="311.0" prefWidth="100.0" spacing="26.0" HBox.hgrow="NEVER">
+         <children>
+            <Label text="Name">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Description">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="27.0" text="Price">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="44.0" text="Review">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="146.0" text="id">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="151.0" spacing="8.0">
+         <children>
+            <TextField fx:id="tdName" />
+            <TextField fx:id="tfDescription" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tdPrice" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tdReview" layoutX="10.0" layoutY="60.0" />
+            <TextField fx:id="tdid" layoutX="10.0" layoutY="137.0" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="416.0">
+         <children>
+            <TableView fx:id="tvProducts" prefHeight="268.0" prefWidth="465.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="colDescription" prefWidth="75.0" text="Description" />
+                  <TableColumn fx:id="colPrice" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="colReview" prefWidth="75.0" text="Review" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="376.0" spacing="15.0">
+               <children>
+                  <Button fx:id="btnInsert" mnemonicParsing="false" onMouseClicked="#insertObj" prefHeight="25.0" prefWidth="75.0" text="Insert" />
+                  <Button fx:id="btnUpdate" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#updateobj" prefHeight="25.0" prefWidth="83.0" text="Update" />
+                  <Button fx:id="btnDelete" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#deleteobj" prefHeight="25.0" prefWidth="87.0" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>

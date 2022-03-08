@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bp" prefHeight="644.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hexgame.v2.NavigationController">
+   <left>
+      <VBox prefHeight="613.0" prefWidth="254.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="277.0" prefWidth="254.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/profile.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="254.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="\@amineselmi">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <Button fx:id="btnHome" mnemonicParsing="false" onMouseClicked="#home" prefHeight="60.0" prefWidth="273.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="435.0" mnemonicParsing="false" onMouseClicked="#Loadproducts" prefHeight="60.0" prefWidth="254.0" style="-fx-background-color: transparent;" text="Load products" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="LoadProductManagement" layoutX="10.0" layoutY="463.0" mnemonicParsing="false" onMouseClicked="#LoadProductManagement" prefHeight="60.0" prefWidth="254.0" style="-fx-background-color: transparent;" text="Product Management" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="428.0" mnemonicParsing="false" onMouseClicked="#LoadCartView" prefHeight="60.0" prefWidth="254.0" style="-fx-background-color: transparent;" text="Cart" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <HBox alignment="CENTER" prefHeight="102.0" prefWidth="254.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="94.0" fitWidth="281.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logo-es-03.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children></VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="1246.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#111a28" layoutX="91.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Homepage">
+               <font>
+                  <Font name="Arial Bold" size="50.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="42.0" fitWidth="36.0" layoutX="1174.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/log-out-regular-24.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="86.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Mr. " />
+            <Text fx:id="textWe" layoutX="186.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="164.6708984375">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <VBox layoutX="86.0" layoutY="331.0" prefHeight="200.0" prefWidth="239.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="162.0" prefWidth="193.0" style="-fx-background-color: #fa9e00;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+                           <font>
+                              <Font name="Arial Bold" size="70.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="239.0" style="-fx-background-color: #111a28;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="414.0" layoutY="331.0" prefHeight="200.0" prefWidth="239.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="162.0" prefWidth="193.0" style="-fx-background-color: #fa9e00;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="40">
+                           <font>
+                              <Font name="Arial Bold" size="70.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="239.0" style="-fx-background-color: #111a28;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Users">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="748.0" layoutY="331.0" prefHeight="200.0" prefWidth="239.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="162.0" prefWidth="193.0" style="-fx-background-color: #fa9e00;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+                           <font>
+                              <Font name="Arial Bold" size="70.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="239.0" style="-fx-background-color: #111a28;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Products">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

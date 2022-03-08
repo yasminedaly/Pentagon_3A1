@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hexgame.v2.ProductManagementController">
+   <children>
+      <TableView fx:id="tvProducts" layoutX="25.0" layoutY="25.0" prefHeight="225.0" prefWidth="479.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colDescription" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="colPrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="colReview" prefWidth="75.0" text="Review" />
+        </columns>
+      </TableView>
+      <Button layoutX="25.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#InsertProduct" prefHeight="31.0" prefWidth="87.0" text="Insert" />
+      <Button layoutX="120.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#UpdateProduct" prefHeight="31.0" prefWidth="87.0" text="Update" />
+      <Button layoutX="213.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#DeleteProduct" prefHeight="31.0" prefWidth="87.0" text="Delete" />
+      <Label layoutX="604.0" layoutY="47.0" text="Name" />
+      <Label layoutX="602.0" layoutY="83.0" text="Description" />
+      <Label layoutX="601.0" layoutY="118.0" text="Price" />
+      <Label layoutX="601.0" layoutY="160.0" text="Review" />
+      <Label layoutX="604.0" layoutY="218.0" text="Id" />
+      <TextField fx:id="name" layoutX="729.0" layoutY="43.0" />
+      <TextField fx:id="description" layoutX="729.0" layoutY="78.0" />
+      <TextField fx:id="price" layoutX="729.0" layoutY="113.0" />
+      <TextField fx:id="review" layoutX="729.0" layoutY="156.0" />
+      <TextField fx:id="ID" layoutX="729.0" layoutY="213.0" />
+      <TextField fx:id="keywordTextField" layoutX="745.0" layoutY="355.0" />
+      <Label layoutX="640.0" layoutY="360.0" text="Search" />
+   </children>
+</AnchorPane>
