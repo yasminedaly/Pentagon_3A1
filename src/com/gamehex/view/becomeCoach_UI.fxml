@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="876.0" style="-fx-background-color: #172333;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pentagon3a1.controller.Coach_UIController">
+    <children>
+      <VBox layoutX="523.0" layoutY="89.0" prefHeight="171.0" prefWidth="192.0" spacing="15.0">
+         <children>
+            <JFXTextField fx:id="txt_profileInfo" />
+            <JFXTextField fx:id="txt_sessionList" />
+            <JFXTextField fx:id="txt_type" />
+            <JFXTextField fx:id="txt_rating" />
+         </children>
+      </VBox>
+      <VBox layoutX="382.0" layoutY="94.0" prefHeight="171.0" prefWidth="114.0" spacing="38.0">
+         <children>
+            <Label text="PROFILR INFO" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="SESSION LIST" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="TYPE" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="RATING" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <VBox layoutX="36.0" layoutY="94.0" prefHeight="190.0" prefWidth="90.0" spacing="38.0">
+         <children>
+            <Label text="ID" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Username" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Password" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="E-MAIL" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="126.0" layoutY="89.0" prefHeight="171.0" prefWidth="192.0" spacing="15.0">
+         <children>
+            <JFXTextField fx:id="txt_coachId" />
+            <JFXTextField fx:id="txt_username" />
+            <JFXPasswordField fx:id="txt_passwd" styleClass="jfx-text-field">
+               <stylesheets>
+                  <URL value="@../../resources/styles/tableView_1.css" />
+                  <URL value="@../../resources/styles/tableView.css" />
+               </stylesheets>
+            </JFXPasswordField>
+            <JFXTextField fx:id="txt_email" />
+         </children>
+      </VBox>
+      <TableView fx:id="tv_coaches" layoutX="19.0" layoutY="311.0" onMouseClicked="#handleMouseAction" prefHeight="207.0" prefWidth="839.0" stylesheets="@../../resources/styles/tableView_1.css">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="87.0" text="ID" />
+          <TableColumn fx:id="col_username" prefWidth="123.0" text="Username" />
+            <TableColumn fx:id="col_profileInfo" prefWidth="117.0" text="ProfileInfo" />
+            <TableColumn fx:id="col_email" prefWidth="121.0" text="Email" />
+            <TableColumn fx:id="col_sessionList" prefWidth="125.0" text="SessionList" />
+            <TableColumn fx:id="col_type" prefWidth="135.0" text="Type" />
+            <TableColumn fx:id="col_rating" prefWidth="112.0" text="Rating" />
+        </columns>
+      </TableView>
+      <Label layoutX="550.0" layoutY="11.0" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="16.0" />
+         </font></Label>
+      <JFXButton fx:id="btn_insert" buttonType="RAISED" layoutX="748.0" layoutY="111.0" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="114.0" stylesheets="@../../resources/styles/tableView_1.css" text="Insert" textFill="WHITE">
+         <effect>
+            <DropShadow color="#898997" />
+         </effect>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#25135d" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="btn_update" buttonType="RAISED" layoutX="748.0" layoutY="178.0" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="114.0" stylesheets="@../../resources/styles/tableView_1.css" text="Update" textFill="WHITE">
+         <effect>
+            <DropShadow color="#898997" />
+         </effect>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#25135d" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="btn_delete" buttonType="RAISED" layoutX="748.0" layoutY="243.0" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="114.0" stylesheets="@../../resources/styles/tableView_1.css" text="Delete" textFill="WHITE">
+         <effect>
+            <DropShadow color="#898997" />
+         </effect>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#25135d" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXTextField fx:id="keywordTextField" layoutX="672.0" layoutY="4.0" promptText="Keyword..." />
+      <Label fx:id="label_warning" layoutX="41.0" layoutY="36.0" visible="false">
+         <font>
+            <Font name="Corbel Bold" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.7233009708737864">
+               <stops>
+                  <Stop color="#e01414" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton fx:id="btn_back" layoutX="19.0" layoutY="17.0" onAction="#handleBackBtn" prefHeight="39.0" prefWidth="100.0" text="Back" />
+    </children>
+   <stylesheets>
+      <URL value="@../../resources/styles/tableView.css" />
+      <URL value="@../../resources/styles/tableView_1.css" />
+   </stylesheets>
+</AnchorPane>
